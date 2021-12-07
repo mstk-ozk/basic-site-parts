@@ -1,3 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
-
+html,body,h1,h2,h3,dl,dt,dd,ul,ol,li,p { margin: 0; padding: 0;}
+ul,ol,li { list-style-type: none;}
+img { border: none; outline: none;}
+a { color: #9A0201; text-decoration: none;}
+html { font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;}
+@media screen and (max-width: 599px){
+}
