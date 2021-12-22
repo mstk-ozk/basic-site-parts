@@ -1,9 +1,39 @@
 @charset "utf-8";
 /* CSS Document */
-html,body,h1,h2,h3,dl,dt,dd,ul,ol,li,p { margin: 0; padding: 0;}
-ul,ol,li { list-style-type: none;}
-img { border: none; outline: none;}
-a { color: #9A0201; text-decoration: none;}
-html { font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;}
+html{ font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;}
+html,body,h1,h2,h3,dl,dt,dd,ul,ol,li,p{ margin: 0; padding: 0;}
+ul,ol,li{ list-style-type: none;}
+img{ border: none; outline: none;}
+a{ color: #9A0201; text-decoration: none;}
+.ul-center{ text-align: center; width: 100%;}
+.ul-center li{ display: inline-block; vertical-align: top;}
+.ul-flex{ display: flex; flex-wrap: wrap; width: 100%;}
+.ul-flex li{ flex-grow: 0;}
+.ul-flex li:nth-child(2){ flex-grow: 1;}
+.ul-grid{ display: grid; grid-template-columns: repeat( auto-fit , minmax( 200px , 1fr)); grid-auto-rows: 100px;}
+.ul-grid li{ display: block;}
+.ul-grid li:first-child{ background-color: #222222;}
+.ul-grid li:nth-child(2){ background-color: #444444;}
+.ul-grid li:nth-child(3){ background-color: #666666;}
+.ul-grid li:nth-child(4){ background-color: #888888;}
+.ul-grid li:last-child{ background-color: #aaaaaa;}
+
+
+/* 変数color指定（IEが未設定） */
+:root{ --main-color: #ff0000; --second-color: #0000ff;}
+.ul-flex li:first-child p{ color: var(--main-color);}
+.ul-flex li:last-child p{ color: var(--second-color);}
+
+/* アニメーション */
+.box{ background-color: #ff0000; height: 100px; width: 100px; transition: background-color , transform .3s ease;}
+.box:hover{ background-color: #ffff00; transform: translateX(100px) rotate( 30deg);}
+.animation{ animation: move 3s alternate infinite 1s; background-color: #ff0000; height: 100px; width: 100px;}
+@keyframes move{
+0%{ transform: none;}
+50%{ transform: translate( 100px , 50px);}
+100%{ transform: translate( 50px , 50px);}
+}
+
+
 @media screen and (max-width: 599px){
 }
