@@ -25,7 +25,7 @@ a{ color: #9A0201; text-decoration: none;}
 .ul-flex li:last-child p{ color: var(--second-color);}
 
 /* アニメーション */
-.box{ background-color: #ff0000; height: 100px; width: 100px; transition: background-color , transform .3s ease;}
+.box{ background-color: #ff0000; height: 100px; width: 100px; transition: background-color 1s , transform 1s ;}
 .box:hover{ background-color: #ffff00; transform: translateX(100px) rotate( 30deg);}
 .animation{ animation: move 3s alternate infinite 1s; background-color: #ff0000; height: 100px; width: 100px;}
 @keyframes move{
@@ -33,6 +33,20 @@ a{ color: #9A0201; text-decoration: none;}
 50%{ transform: translate( 100px , 50px);}
 100%{ transform: translate( 50px , 50px);}
 }
+
+/* Q&Aのようなアコーディオン */
+.accordion-basic{ margin-top: 60px;}
+.accordion-basic dt{ background-color: #222222; cursor: pointer; margin-bottom: 2px; padding: 10px;}
+.accordion-basic dt p{ color: #ffffff; font-size: 16px; font-weight: bold;}
+.accordion-basic dd{ display: none; padding: 10px; animation: show .3s linear 0s;}
+.accordion-basic dd p{ font-size: 14px;}
+.display-toggle{ display: block !important;}
+
+@keyframes show{
+from{ opacity: 0;}
+to{ opacity: 1;}
+}
+
 
 
 @media screen and (max-width: 599px){
